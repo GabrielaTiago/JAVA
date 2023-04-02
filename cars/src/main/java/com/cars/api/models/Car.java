@@ -1,5 +1,7 @@
 package com.cars.api.models;
 
+import com.cars.api.dto.CarDTO;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -20,7 +22,6 @@ public class Car {
     @Column(length = 20, nullable = false)
     private String fabricante;
 
-
     @Column(length = 10, nullable = false)
     private String dataFabricacao;
     
@@ -29,4 +30,11 @@ public class Car {
 
     @Column(nullable = false)
     private int anoModelo;
+
+    public Car(CarDTO data) {
+        this.modelo = data.modelo();
+        this.fabricante = data.fabricante();
+        this.dataFabricacao = data.dataFabricacao();
+        this.anoModelo = data.anoModelo();
+    }
 }
