@@ -19,24 +19,25 @@ public class Car {
     private Long id;
 
     @Column(length = 50, nullable = false)
-    private String modelo;
+    private String carModel;
 
     @Column(length = 20, nullable = false)
-    private String fabricante;
+    private String manufacturer;
 
     @Column(length = 10, nullable = false)
-    private String dataFabricacao;
+    private String manufactureDate;
     
     @Column(nullable = false)
-    private int valor;
+    private int price;
 
     @Column(nullable = false)
-    private int anoModelo;
+    private int modelYear;
 
     public Car(CarDTO data) {
-        this.modelo = data.modelo();
-        this.fabricante = data.fabricante();
-        this.dataFabricacao = data.dataFabricacao();
-        this.anoModelo = data.anoModelo();
+        this.carModel = data.carModel();
+        this.manufacturer = data.manufacturer();
+        this.manufactureDate = data.manufactureDate();
+        this.price = data.price();
+        this.modelYear = data.modelYear();
     }
 }

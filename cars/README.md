@@ -2,19 +2,27 @@
 
 ## Pemissa
 
-API Spring para carros. Rota POST **"/api/cars"** para realizar a inserção de um novo carro.
+API Spring para carros. Foi desenvolvido um CRUD completo.
 
-Utlizando conceitos de controladores e DTO
+- Rota POST **"/api/cars"** para realizar a inserção de um novo carro.
+- Rota GET **"/api/cars"** para realizar a busca de todos os carros cadastrados.
+- Rota PUT **"/api/cars/{id}"** para atualizar os dados de um carro cadastrado.
+- Rota DELETE **"/api/cars/{id}"** para deletar um carro cadastrado.
+
+$~$
+
+Utlizando conceitos de DTOs, models, controladores, serviços e repositórios.
 
 ```json
+Para as rotas POST e PUT
 
     body:
 
     {
-        "modelo": "Fiat UNO 1.3",
-        "fabricante": "Fiat",
-        "dataFabricacao": "10/02/2006",
-        "valor": 13.000,
-        "anoModelo": 2006
+        "carModel": "Fiat UNO 1.3",
+        "manufacturer": "Fiat",
+        "manufactureDate": "10/02/2006",
+        "price": 13.000,
+        "modelYear": 2006
     }
 ```
